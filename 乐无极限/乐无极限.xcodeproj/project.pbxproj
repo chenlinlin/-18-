@@ -20,24 +20,12 @@
 		C2114C121CC07E90008226DA /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C111CC07E90008226DA /* ThirdViewController.m */; };
 		C2114C151CC07E9D008226DA /* SecontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C141CC07E9D008226DA /* SecontViewController.m */; };
 		C2114C171CC08165008226DA /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = C2114C161CC08165008226DA /* movie.png */; };
-		C2114C1A1CC081EC008226DA /* DiyiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C191CC081EC008226DA /* DiyiViewController.m */; };
-		C2114C1D1CC081F8008226DA /* DierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C1C1CC081F8008226DA /* DierViewController.m */; };
-		C2114C201CC08206008226DA /* DisanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C1F1CC08206008226DA /* DisanViewController.m */; };
-		C2114C231CC08217008226DA /* DisiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C221CC08217008226DA /* DisiViewController.m */; };
 		C2114C271CC082C3008226DA /* UIView+XMGext.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C261CC082C3008226DA /* UIView+XMGext.m */; };
 		C2114C311CC100C5008226DA /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C301CC100C5008226DA /* NewsCell.m */; };
 		C2114C341CC100D9008226DA /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C331CC100D9008226DA /* NewsModel.m */; };
 		C2114C371CC10771008226DA /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C361CC10771008226DA /* NewsViewController.m */; };
 		C2114C3A1CC10D11008226DA /* NSString+Html.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114C391CC10D11008226DA /* NSString+Html.m */; };
-		C283F20F1CC37D5100CAE1DD /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C283F20E1CC37D5100CAE1DD /* ImageModel.m */; };
-		C283F2341CC3DD1400CAE1DD /* safe.png in Resources */ = {isa = PBXBuildFile; fileRef = C283F2331CC3DD1400CAE1DD /* safe.png */; };
-		C283F2361CC3DD2500CAE1DD /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = C283F2351CC3DD2500CAE1DD /* money.png */; };
-		C28437501CC2726100BEBEFF /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C284374F1CC2726100BEBEFF /* ImageCell.m */; };
 		C2B5E5351CC1D2E700830132 /* aa.png in Resources */ = {isa = PBXBuildFile; fileRef = C2B5E5341CC1D2E700830132 /* aa.png */; };
-		C2B5E5391CC1D77700830132 /* VodeoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5E5381CC1D77700830132 /* VodeoCell.m */; };
-		C2B5E56A1CC2249B00830132 /* PlayVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5E5691CC2249B00830132 /* PlayVeiw.m */; };
-		C2B5E56D1CC224C800830132 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5E56C1CC224C800830132 /* PlayViewController.m */; };
-		C2B5E5701CC2289000830132 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5E56F1CC2289000830132 /* VideoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,14 +52,6 @@
 		C2114C131CC07E9D008226DA /* SecontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecontViewController.h; sourceTree = "<group>"; };
 		C2114C141CC07E9D008226DA /* SecontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecontViewController.m; sourceTree = "<group>"; };
 		C2114C161CC08165008226DA /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
-		C2114C181CC081EC008226DA /* DiyiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiyiViewController.h; sourceTree = "<group>"; };
-		C2114C191CC081EC008226DA /* DiyiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiyiViewController.m; sourceTree = "<group>"; };
-		C2114C1B1CC081F8008226DA /* DierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DierViewController.h; sourceTree = "<group>"; };
-		C2114C1C1CC081F8008226DA /* DierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DierViewController.m; sourceTree = "<group>"; };
-		C2114C1E1CC08206008226DA /* DisanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisanViewController.h; sourceTree = "<group>"; };
-		C2114C1F1CC08206008226DA /* DisanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisanViewController.m; sourceTree = "<group>"; };
-		C2114C211CC08217008226DA /* DisiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisiViewController.h; sourceTree = "<group>"; };
-		C2114C221CC08217008226DA /* DisiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisiViewController.m; sourceTree = "<group>"; };
 		C2114C251CC082C3008226DA /* UIView+XMGext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMGext.h"; sourceTree = "<group>"; };
 		C2114C261CC082C3008226DA /* UIView+XMGext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMGext.m"; sourceTree = "<group>"; };
 		C2114C2F1CC100C5008226DA /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
@@ -82,22 +62,8 @@
 		C2114C361CC10771008226DA /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		C2114C381CC10D11008226DA /* NSString+Html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Html.h"; sourceTree = "<group>"; };
 		C2114C391CC10D11008226DA /* NSString+Html.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Html.m"; sourceTree = "<group>"; };
-		C283F20D1CC37D5100CAE1DD /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
-		C283F20E1CC37D5100CAE1DD /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
-		C283F2331CC3DD1400CAE1DD /* safe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safe.png; sourceTree = "<group>"; };
-		C283F2351CC3DD2500CAE1DD /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
-		C284374E1CC2726100BEBEFF /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
-		C284374F1CC2726100BEBEFF /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		C2B5E5301CC1D13E00830132 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C2B5E5341CC1D2E700830132 /* aa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aa.png; sourceTree = "<group>"; };
-		C2B5E5371CC1D77700830132 /* VodeoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VodeoCell.h; sourceTree = "<group>"; };
-		C2B5E5381CC1D77700830132 /* VodeoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VodeoCell.m; sourceTree = "<group>"; };
-		C2B5E5681CC2249B00830132 /* PlayVeiw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVeiw.h; sourceTree = "<group>"; };
-		C2B5E5691CC2249B00830132 /* PlayVeiw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVeiw.m; sourceTree = "<group>"; };
-		C2B5E56B1CC224C800830132 /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
-		C2B5E56C1CC224C800830132 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		C2B5E56E1CC2289000830132 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
-		C2B5E56F1CC2289000830132 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
 		F218EAB2B28EA58C820D58EF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,13 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				C2114C321CC100D9008226DA /* NewsModel.h */,
-				C283F2331CC3DD1400CAE1DD /* safe.png */,
-				C283F2351CC3DD2500CAE1DD /* money.png */,
 				C2114C331CC100D9008226DA /* NewsModel.m */,
-				C2B5E56E1CC2289000830132 /* VideoModel.h */,
-				C2B5E56F1CC2289000830132 /* VideoModel.m */,
-				C283F20D1CC37D5100CAE1DD /* ImageModel.h */,
-				C283F20E1CC37D5100CAE1DD /* ImageModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -209,11 +169,6 @@
 			children = (
 				C2114C2F1CC100C5008226DA /* NewsCell.h */,
 				C2114C301CC100C5008226DA /* NewsCell.m */,
-				C2114C351CC10771008226DA /* NewsViewController.h */,
-				C2114C361CC10771008226DA /* NewsViewController.m */,
-				C284374E1CC2726100BEBEFF /* ImageCell.h */,
-				C284374F1CC2726100BEBEFF /* ImageCell.m */,
-				C2B5E5361CC1D72900830132 /* videoViews */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -223,14 +178,8 @@
 			children = (
 				C2114BFC1CC07D62008226DA /* FirstViewController.h */,
 				C2114BFD1CC07D62008226DA /* FirstViewController.m */,
-				C2114C181CC081EC008226DA /* DiyiViewController.h */,
-				C2114C191CC081EC008226DA /* DiyiViewController.m */,
-				C2114C1B1CC081F8008226DA /* DierViewController.h */,
-				C2114C1C1CC081F8008226DA /* DierViewController.m */,
-				C2114C1E1CC08206008226DA /* DisanViewController.h */,
-				C2114C1F1CC08206008226DA /* DisanViewController.m */,
-				C2114C211CC08217008226DA /* DisiViewController.h */,
-				C2114C221CC08217008226DA /* DisiViewController.m */,
+				C2114C351CC10771008226DA /* NewsViewController.h */,
+				C2114C361CC10771008226DA /* NewsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -355,19 +304,6 @@
 			name = imgs;
 			sourceTree = "<group>";
 		};
-		C2B5E5361CC1D72900830132 /* videoViews */ = {
-			isa = PBXGroup;
-			children = (
-				C2B5E5371CC1D77700830132 /* VodeoCell.h */,
-				C2B5E5381CC1D77700830132 /* VodeoCell.m */,
-				C2B5E5681CC2249B00830132 /* PlayVeiw.h */,
-				C2B5E5691CC2249B00830132 /* PlayVeiw.m */,
-				C2B5E56B1CC224C800830132 /* PlayViewController.h */,
-				C2B5E56C1CC224C800830132 /* PlayViewController.m */,
-			);
-			name = videoViews;
-			sourceTree = "<group>";
-		};
 		D78517268EBC182A83DF2DBD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,9 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B5E5351CC1D2E700830132 /* aa.png in Resources */,
-				C283F2361CC3DD2500CAE1DD /* money.png in Resources */,
 				C2114C171CC08165008226DA /* movie.png in Resources */,
-				C283F2341CC3DD1400CAE1DD /* safe.png in Resources */,
 				C2114BF11CC07CF4008226DA /* LaunchScreen.storyboard in Resources */,
 				C2114BEE1CC07CF4008226DA /* Assets.xcassets in Resources */,
 				C2114BEC1CC07CF4008226DA /* Main.storyboard in Resources */,
@@ -504,26 +438,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2316C1C91CC0C97E00872225 /* FifthViewController.m in Sources */,
-				C2114C201CC08206008226DA /* DisanViewController.m in Sources */,
 				C2114BE91CC07CF4008226DA /* ViewController.m in Sources */,
-				C2114C231CC08217008226DA /* DisiViewController.m in Sources */,
 				C2114C271CC082C3008226DA /* UIView+XMGext.m in Sources */,
-				C2B5E5701CC2289000830132 /* VideoModel.m in Sources */,
-				C2B5E5391CC1D77700830132 /* VodeoCell.m in Sources */,
 				C2114C0F1CC07E77008226DA /* FourthViewController.m in Sources */,
 				C2114C3A1CC10D11008226DA /* NSString+Html.m in Sources */,
-				C2B5E56D1CC224C800830132 /* PlayViewController.m in Sources */,
 				C2114C151CC07E9D008226DA /* SecontViewController.m in Sources */,
-				C2114C1D1CC081F8008226DA /* DierViewController.m in Sources */,
 				C2114C121CC07E90008226DA /* ThirdViewController.m in Sources */,
-				C28437501CC2726100BEBEFF /* ImageCell.m in Sources */,
 				C2114BE61CC07CF4008226DA /* AppDelegate.m in Sources */,
-				C283F20F1CC37D5100CAE1DD /* ImageModel.m in Sources */,
 				C2114C341CC100D9008226DA /* NewsModel.m in Sources */,
-				C2B5E56A1CC2249B00830132 /* PlayVeiw.m in Sources */,
 				C2114C371CC10771008226DA /* NewsViewController.m in Sources */,
 				C2114C311CC100C5008226DA /* NewsCell.m in Sources */,
-				C2114C1A1CC081EC008226DA /* DiyiViewController.m in Sources */,
 				C2114BE31CC07CF4008226DA /* main.m in Sources */,
 				C2114BFE1CC07D62008226DA /* FirstViewController.m in Sources */,
 			);

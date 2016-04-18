@@ -7,167 +7,170 @@
 //
 
 #import "FirstViewController.h"
-#import "DiyiViewController.h"
-#import "DierViewController.h"
-#import "DisanViewController.h"
-#import "DisiViewController.h"
-#import "UIView+XMGext.h"
-#define ScreenWidth    [[UIScreen mainScreen] bounds].size.width
-#define ScreenHeight   [[UIScreen mainScreen] bounds ].size.height
-@interface FirstViewController ()<UIScrollViewDelegate>
-
-@property(nonatomic,strong)UIScrollView *crollView;
-
-//标签栏底部的红色指示器
-@property(nonatomic,strong) UIView *indicatyorView;
-//当前选中 的按钮
-@property(nonatomic,strong)UIButton *butt;
-//顶部的所有标签
-@property(nonatomic,strong)UIView *titlesView;
-//底部的所有内容
-@property(nonatomic,strong)UIScrollView *conrentView;
+#import "NewsCell.h"
+#import "NewsModel.h"
+#import "NewsViewController.h"
+#import "Header.h"
+@interface FirstViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property(nonatomic,strong)UISegmentedControl *seg;
+@property(nonatomic,strong)UITableView *tabelView1;
+@property(nonatomic,strong)NSMutableArray *array;
+@property(nonatomic,assign)int temp;
 @end
 
 @implementation FirstViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor =[UIColor colorWithRed:arc4random()%256/255.0 green:arc4random()%256/255.0 blue:arc4random()%256/255.0 alpha:1];
-
-    //初始化所有控制器
     [self view1];
-    //设置标签栏
-    [self setupTitlesView];
-    //底部的scrolView
-    [self setpContenView];
-    
-    
 }
-
 -(void)view1{
     
-    DiyiViewController *view1 =[[DiyiViewController alloc] init];
-    DierViewController*view2 =[[DierViewController alloc] init];
-    DisanViewController *view3 =[[DisanViewController alloc] init];
-    DisiViewController *view4 =[[DisiViewController alloc] init];
-    [self addChildViewController:view2];
-
-    [self addChildViewController:view1];
-    [self addChildViewController:view3];
-    [self addChildViewController:view4];
+    self.tabelView1 =[[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-44) style:(UITableViewStylePlain)];
+    [self.view addSubview:self.tabelView1];
+    [self.tabelView1 registerClass:[NewsCell class] forCellReuseIdentifier:@"newscell"];
+    self.tabelView1.delegate=self;
+    self.tabelView1.dataSource =self;
+    //上刷新
+    self.tabelView1 .mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNew)];
+    //进入刷新状态
+    [self.tabelView1.mj_header beginRefreshing];
+    //下加载
+    self.tabelView1 .mj_footer =[MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(abc)];
 }
-//scrollView代理方法
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+-(void)loadNew{
+    [self data];
+}
+-(void)abc{
+    [self data22222];
     
-    [self scrollViewDidEndScrollingAnimation:scrollView];
-    
-    //点击按钮
-    NSInteger index =scrollView.contentOffset.x / scrollView.width;
-    [self titleClick:self.titlesView.subviews[index]];
     
 }
-//设置标签栏
--(void)setupTitlesView{
-    //标签栏整体
-    UIView *titlesView =[[UIView alloc] init];
-    titlesView.backgroundColor =[UIColor greenColor];
+-(void)data{
     
-    titlesView.frame =CGRectMake(0,64, ScreenWidth, 20);
-    [self.view addSubview: titlesView];
-    self.titlesView =titlesView;
+    self.array =[NSMutableArray array];
     
-    //底部红色指示器
-    self.indicatyorView =[[UIView alloc] init];
     
-    self.indicatyorView.backgroundColor =[UIColor redColor];
-    self.indicatyorView.height =2;
-    self.indicatyorView.tag =-1;
-    self.indicatyorView.y =titlesView.height -self.indicatyorView.height;
-    //内部子标签
-    NSArray *titles =@[@"最新",@"段子",@"图片",@"视频"];
-    CGFloat width =titlesView.width/titles.count;
-    CGFloat height =titlesView.height;
+    NSURLSession *session =[NSURLSession sharedSession];
+    //创建url
+    NSString *urlstring =[NSString stringWithFormat:@"http://c.m.163.com/nc/article/list/T1348648517839/%d-20.html",self.temp];
     
-    for (NSInteger i =0; i <4 ; i++) {
-        UIButton *but =[[UIButton alloc] init];
-        but.tag =i;
-        but.height =height;
-        but.width=width;
-        but.x =i*width;
-        [but setTitle:titles[i] forState:UIControlStateNormal];
-        //强制布局更新子控件的fram
-        //        [but layoutIfNeeded];
-        [but setTitleColor:[UIColor grayColor] forState:(UIControlStateNormal)];
-        [but setTitleColor:[UIColor redColor] forState:(UIControlStateDisabled)];
-        but.titleLabel.font =[UIFont systemFontOfSize:16];
+    NSURL *url =[NSURL URLWithString:urlstring];
+    //通过URL初始化task 在block内处理数据
+    NSURLSessionTask *task =[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];
         
-        [but addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [titlesView addSubview:but];
-        //默认点击第一个按钮
-        if(i ==0){
-            but.enabled =NO;
-            self.butt =but;
-            //让按钮内部的lebel根据文字的内容来计算尺寸
-            [but.titleLabel sizeToFit];
-            self.indicatyorView.width =but.titleLabel.width;
-            self.indicatyorView.centerX =but.centerX;
+        NSArray *arr =dic[@"T1348648517839"];
+        NSMutableArray *arrrrr =[NSMutableArray array];
+        for (NSDictionary *dic1 in arr) {
+            NewsModel *model =[[NewsModel alloc] init];
+            
+            [model setValuesForKeysWithDictionary:dic1];
+            
+            if (model.url ==nil) {
+                
+            }else{
+                [arrrrr addObject:dic1];
+                
+            }
             
         }
-    }
-    [titlesView addSubview:self.indicatyorView];
-    
-    
-    
-    
-}
--(void)titleClick:(UIButton *)but{
-    //修改按钮状态
-    self.butt.enabled =YES;
-    but.enabled =NO;
-    self.butt =but;
-    //动画
-    [UIView animateWithDuration:0.2 animations:^{
-        self.indicatyorView.width =but.titleLabel.width;
-        self.indicatyorView.centerX =but.centerX;
+        NSArray *aaaaa =[NewsModel
+                         mj_objectArrayWithKeyValuesArray:arrrrr];
+        [self.array addObjectsFromArray:aaaaa];
+        self.temp =0;
+        
+        //返回主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tabelView1.mj_header endRefreshing];
+            [self.tabelView1.mj_footer endRefreshing];
+            
+            [self.tabelView1 reloadData];
+            
+        });
     }];
     
-    //滚动
-    CGPoint offset =self.conrentView.contentOffset;
-    offset.x =but.tag *self.conrentView.width;
-    [self.conrentView setContentOffset:offset animated:YES];
+    [task resume];
     
 }
--(void)setpContenView{
-    //不要自动调整inset
-    self.automaticallyAdjustsScrollViewInsets =NO;
-    UIScrollView *contentView =[[UIScrollView alloc] init];
-    //    contentView.frame =self.view.bounds;
-    contentView.frame =CGRectMake(0, 0, ScreenWidth, ScreenHeight);
-    contentView.delegate =self;
-    contentView.pagingEnabled =YES;
-    [self.view insertSubview:contentView atIndex:0];
-    contentView.contentSize =CGSizeMake(contentView.width *self.childViewControllers.count, 0);
+-(void)data22222{
     
-    self.conrentView =contentView;
-    //添加第一个控制器的view
-    [self scrollViewDidEndScrollingAnimation:contentView];
+    self.temp+=25;
+    
+    NSURLSession *session =[NSURLSession sharedSession];
+    //创建url
+    NSString *urlstring =[NSString stringWithFormat:@"http://c.m.163.com/nc/article/list/T1348648517839/%d-20.html",self.temp];
+    
+    NSURL *url =[NSURL URLWithString:urlstring];
+    //通过URL初始化task 在block内处理数据
+    NSURLSessionTask *task =[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingAllowFragments) error:nil];
+        
+        NSArray *arr =dic[@"T1348648517839"];
+        NSMutableArray *arrrrr =[NSMutableArray array];
+        for (NSDictionary *dic1 in arr) {
+            NewsModel *model =[[NewsModel alloc] init];
+            
+            [model setValuesForKeysWithDictionary:dic1];
+            
+            if (model.url ==nil) {
+                
+            }else{
+                [arrrrr addObject:dic1];
+                
+            }
+            
+        }
+        NSArray *aaaaa =[NewsModel mj_objectArrayWithKeyValuesArray:arrrrr];
+        [self.array addObjectsFromArray:aaaaa];
+        self.temp =0;
+        
+        //返回主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.tabelView1.mj_header endRefreshing];
+            [self.tabelView1.mj_footer endRefreshing];
+            
+            [self.tabelView1 reloadData];
+            
+        });
+    }];
+    
+    [task resume];
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.array.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsCell *cell =[tableView dequeueReusableCellWithIdentifier:@"newscell"];
+    //去掉分割线
+    tableView.separatorStyle =UITableViewCellSeparatorStyleNone;
+    //去掉选中时的颜色
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NewsModel *model =self.array[indexPath.row];
+    cell.titelLabel.text =model.title;
+    cell.neirongLabel.text =model.ltitle;
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:model.imgsrc] placeholderImage:Image];
+    cell.shijianLabel.text =[NSString stringWithFormat:@"发布时间:%@",model.ptime];
+    return cell;
 }
 
 
--(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-    //当前的索引
-    NSInteger index = scrollView.contentOffset.x/scrollView.width;
-    //取出自控制器
-    UIViewController *vc =self.childViewControllers[index];
-    vc.view.x =scrollView.contentOffset.x;
-    vc.view.y =0; //设置控制器view的y值为0
-    vc.view.height =scrollView.height;
-    [scrollView addSubview:vc.view];
-    
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 105;
 }
-//控制器即将消失的时候
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NewsViewController *newsVC=[[NewsViewController alloc] init];
+    newsVC.model =self.array[indexPath.row];
+    
+    [self.navigationController pushViewController:newsVC animated:YES];
+}
 
 
 @end
