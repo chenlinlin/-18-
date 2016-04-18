@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2316C1C91CC0C97E00872225 /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2316C1C81CC0C97E00872225 /* FifthViewController.m */; };
+		233435021CC478AA00548930 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 233435011CC478AA00548930 /* 1.png */; };
+		233435041CC47C9C00548930 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 233435031CC47C9C00548930 /* 2.png */; };
+		233435061CC47DF100548930 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 233435051CC47DF100548930 /* 3.png */; };
+		233435081CC47EAD00548930 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 233435071CC47EAD00548930 /* 4.png */; };
 		B2AD26634D346720D378B995 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 539B10245ACC727B9DEE0DC2 /* libPods.a */; };
 		C2114BE31CC07CF4008226DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114BE21CC07CF4008226DA /* main.m */; };
 		C2114BE61CC07CF4008226DA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2114BE51CC07CF4008226DA /* AppDelegate.m */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		2316C1C71CC0C97E00872225 /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
 		2316C1C81CC0C97E00872225 /* FifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
+		233435011CC478AA00548930 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		233435031CC47C9C00548930 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		233435051CC47DF100548930 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		233435071CC47EAD00548930 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		539B10245ACC727B9DEE0DC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41286B0C4BFF0FF8D0299DE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2114BDE1CC07CF4008226DA /* 乐无极限.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "乐无极限.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +174,10 @@
 				C2114BEF1CC07CF4008226DA /* LaunchScreen.storyboard */,
 				C2114BF21CC07CF4008226DA /* Info.plist */,
 				C2114C161CC08165008226DA /* movie.png */,
+				233435011CC478AA00548930 /* 1.png */,
+				233435031CC47C9C00548930 /* 2.png */,
+				233435051CC47DF100548930 /* 3.png */,
+				233435071CC47EAD00548930 /* 4.png */,
 				C2114BE11CC07CF4008226DA /* Supporting Files */,
 			);
 			path = "乐无极限";
@@ -438,11 +450,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233435081CC47EAD00548930 /* 4.png in Resources */,
 				C2B5E5351CC1D2E700830132 /* aa.png in Resources */,
+				233435021CC478AA00548930 /* 1.png in Resources */,
 				C283F2361CC3DD2500CAE1DD /* money.png in Resources */,
 				C2114C171CC08165008226DA /* movie.png in Resources */,
 				C283F2341CC3DD1400CAE1DD /* safe.png in Resources */,
+				233435061CC47DF100548930 /* 3.png in Resources */,
 				C2114BF11CC07CF4008226DA /* LaunchScreen.storyboard in Resources */,
+				233435041CC47C9C00548930 /* 2.png in Resources */,
 				C2114BEE1CC07CF4008226DA /* Assets.xcassets in Resources */,
 				C2114BEC1CC07CF4008226DA /* Main.storyboard in Resources */,
 			);
