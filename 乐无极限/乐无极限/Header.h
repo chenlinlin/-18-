@@ -14,6 +14,7 @@
 #import <AFNetworking.h>
 #import "NSObject+MJKeyValue.h"
 
+#define Plist [dic writeToFile:@"/Users/lanou3g/Desktop/pppp/news.plist" atomically:YES];
 
 #define Image [UIImage imageNamed:@"aa"]
 #define ScreenWidth    [[UIScreen mainScreen] bounds].size.width
