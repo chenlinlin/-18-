@@ -74,7 +74,6 @@
 
 -(void)butAction:(UIButton *)sender{
     NSLog(@"1");
-
 }
 
 //控制器即将消失的时候
